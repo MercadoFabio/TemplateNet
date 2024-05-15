@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>$safeprojectname$</name>
+    </assembly>
+    <members>
+        <member name="T:$safeprojectname$.Config.ServicesConfig">
+            <summary>
+            Clase de configuración de servicios.
+            </summary>
+        </member>
+        <member name="M:$safeprojectname$.Config.ServicesConfig.AddConfig(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Método para agregar la configuración de servicios.
+            </summary>
+            <param name="services">La colección de servicios.</param>
+            <param name="configuration">La configuración.</param>
+        </member>
+        <member name="M:$safeprojectname$.Config.ServicesConfig.AddJwt(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Método para agregar la configuración de JWT.
+            </summary>
+            <param name="services">La colección de servicios.</param>
+        </member>
+        <member name="M:$safeprojectname$.Config.ServicesConfig.AddExternalServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Método para agregar los servicios externos.
+            </summary>
+            <param name="services">La colección de servicios.</param>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.BaseController.Return``1(CapacitacionesAPI.Application.ResponseDto.Common.OperationResponse{``0})">
+            <summary>
+            Maneja el retorno de respuestas de operación comunes, como NotFound, BadRequest, y Ok.
+            </summary>
+            <typeparam name="T">Tipo de datos de la respuesta.</typeparam>
+            <param name="response">Respuesta de operación a manejar.</param>
+            <returns>Una acción de resultado que representa la respuesta.</returns>
+        </member>
+        <member name="T:$safeprojectname$.Controllers.CacheController">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con la caché.
+            </summary>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.CacheController.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Controlador para gestionar las operaciones relacionadas con la caché.
+            </summary>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.CacheController.ClearCache">
+            <summary>
+            Elimina todas las claves de la caché.
+            </summary>
+            <returns>Retorna un operation response con un booleano.</returns>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.CacheController.ClearKeyCache(System.String)">
+            <summary>
+            Elimina una clave de la caché.
+            </summary>
+            <param name="key">clave a ser eliminada.</param>
+            <returns>Retorna un operation response con un booleano.</returns>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.CacheController.GetKeyCache(System.String)">
+            <summary>
+            Obtiene una clave de la caché.
+            </summary>
+            <param name="key">clave a ser obtenida.</param>
+            <returns>Retorna un operation response con un booleano.</returns>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.CacheController.GetCacheKeys">
+            <summary>
+            Recupera todas las claves de la caché.
+            </summary>
+            <returns>Retorna la clase operation response con una lista de string.</returns>
+        </member>
+        <member name="M:$safeprojectname$.Controllers.PingController.Get">
+            <summary>
+            Verifica el estado de salud de la app.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:$safeprojectname$.Middlewares.GlobalExceptionHandlingMiddleware">
+            <summary>
+            Middleware para el manejo global de excepciones.
+            </summary>
+            <remarks>
+            Constructor de la clase GlobalExceptionHandlingMiddleware.
+            </remarks>
+            <param name="next">Delegate de la solicitud siguiente.</param>
+            <param name="logger">Logger para el middleware.</param>
+        </member>
+        <member name="M:$safeprojectname$.Middlewares.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{$safeprojectname$.Middlewares.GlobalExceptionHandlingMiddleware})">
+            <summary>
+            Middleware para el manejo global de excepciones.
+            </summary>
+            <remarks>
+            Constructor de la clase GlobalExceptionHandlingMiddleware.
+            </remarks>
+            <param name="next">Delegate de la solicitud siguiente.</param>
+            <param name="logger">Logger para el middleware.</param>
+        </member>
+        <member name="M:$safeprojectname$.Middlewares.GlobalExceptionHandlingMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Método para invocar el middleware.
+            </summary>
+            <param name="context">Contexto de la solicitud HTTP.</param>
+            <returns><see cref="T:System.Threading.Tasks.Task"/> Representa el asincronismo del metodo.</returns>
+        </member>
+        <member name="M:$safeprojectname$.Middlewares.GlobalExceptionHandlingMiddleware.HandleExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            Método para manejar las excepciones.
+            </summary>
+            <param name="context">Contexto de la solicitud HTTP.</param>
+            <param name="exception">Excepción ocurrida.</param>
+            <returns>Tarea asincrónica.</returns>
+        </member>
+        <member name="T:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1">
+            <summary>
+            Respuesta de operación Swagger.
+            </summary>
+            <typeparam name="T">Tipo de datos de la respuesta.</typeparam>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.Success">
+            <summary>
+            Indica si la operación fue exitosa.
+            </summary>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.Message">
+            <summary>
+            Mensaje de la operación.
+            </summary>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.Data">
+            <summary>
+            Datos de la respuesta.
+            </summary>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.Code">
+            <summary>
+            Código de la operación.
+            </summary>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.TotalRows">
+            <summary>
+            Número total de filas.
+            </summary>
+        </member>
+        <member name="P:$safeprojectname$.ResponsesSwagger.OperationResponseSwagger`1.Exception">
+            <summary>
+            Excepción de la operación.
+            </summary>
+        </member>
+    </members>
+</doc>

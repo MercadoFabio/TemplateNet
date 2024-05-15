@@ -1,0 +1,57 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+   <Name>TemplateApplication</Name>
+    <Description>Template with Onion architecture created by Fabio Mercado.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.Application.csproj" File="Template.Application.csproj" ReplaceParameters="true">
+      <Folder Name="AutoMapper" TargetFolderName="AutoMapper">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AutoMapperProfile.cs">AutoMapperProfile.cs</ProjectItem>
+      </Folder>
+      <Folder Name="RequestDto" TargetFolderName="RequestDto">
+        <Folder Name="Example" TargetFolderName="Example">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ExampleDto.cs">ExampleDto.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="ResponseDto" TargetFolderName="ResponseDto">
+        <Folder Name="Common" TargetFolderName="Common">
+          <ProjectItem ReplaceParameters="true" TargetFileName="File.cs">File.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="OperationResponse.cs">OperationResponse.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Sequences" TargetFolderName="Sequences">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Sequence.cs">Sequence.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <Folder Name="Contracts" TargetFolderName="Contracts">
+          <ProjectItem ReplaceParameters="true" TargetFileName="IFileService.cs">IFileService.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Implementations" TargetFolderName="Implementations">
+          <ProjectItem ReplaceParameters="true" TargetFileName="FileService.cs">FileService.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="BaseService.cs">BaseService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Utilities" TargetFolderName="Utilities">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Utilities.cs">Utilities.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Validators" TargetFolderName="Validators">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ExampleValidator.cs">ExampleValidator.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName=".editorconfig">.editorconfig</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName=".editorconfig">vstg0001.editorconfig</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppSettings.cs">AppSettings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalUsings.cs">GlobalUsings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

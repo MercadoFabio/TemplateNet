@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TemplateDomain</Name>
+    <Description>Template with Onion architecture created by Fabio Mercado.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TemplateDomain</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Template.Domain.csproj" File="Template.Domain.csproj" ReplaceParameters="true">
+      <Folder Name="Auditable" TargetFolderName="Auditable">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IEntityAuditable.cs">IEntityAuditable.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Enums" TargetFolderName="Enums" />
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Context.cs">Context.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TExample.cs">TExample.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="GlobalUsings.cs">GlobalUsings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
